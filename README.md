@@ -122,6 +122,7 @@ tcp6       0      0 :::5901                 :::                    LISTEN      9
 unix  2      [ ACC ]     STREAM     LISTENING     144858   91748/Xvnc           @/tmp/.X11-unix/X1
 unix  2      [ ACC ]     STREAM     LISTENING     144859   91748/Xvnc           /tmp/.X11-unix/X1
 
+
 tcp右侧显示了当前vnc服务启用的端口。如果有多个用户，每个***ID***.service都是一个独立的服务，每个***ID***.service都是独立的服务端口号。
 ## 10. 连接vnc服务端
 使用MobaXterm软件连接即可。
