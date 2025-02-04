@@ -94,8 +94,8 @@ sudo systemctl enable vncserver@:1.service
 ```
 
 ## 8. 查看vnc服务状态
-
-> [test@localhost ~]$ sudo systemctl status vncserver@:1.service
+```bash
+ [test@localhost ~]$ sudo systemctl status vncserver@:1.service
 ● vncserver@:1.service - Remote desktop service (VNC)
      Loaded: loaded (/etc/systemd/system/vncserver@:1.service; enabled; preset: disabled)
      Active: active (running) since Fri 2024-05-17 20:15:32 CST; 7s ago
@@ -109,7 +109,7 @@ sudo systemctl enable vncserver@:1.service
              ‣ 91738 /usr/sbin/vncsession test :1
 May 17 20:15:32 localhost.localdomain systemd[1]: Starting Remote desktop service (VNC)...
 May 17 20:15:32 localhost.localdomain systemd[1]: Started Remote desktop service (VNC).
->
+```
 
 
 ## 9. 查看vnc启用的端口  
