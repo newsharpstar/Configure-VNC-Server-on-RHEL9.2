@@ -37,13 +37,13 @@ sudo vim /etc/tigervnc/vncserver.users
 ```
 
 ## 4. 修改vnc账户登录密码
-
-> [test@localhost ~]$ vncpasswd
+```bash
+[test@localhost ~]$ vncpasswd
 Password:
 Verify:
 Would you like to enter a view-only password (y/n)? n
 A view-only password is not used
-
+```
 vnc登录密码与test登录RHEL的系统密码相互独立。
 ```bash
 vncpasswd
