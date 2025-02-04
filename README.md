@@ -1,4 +1,3 @@
-# Configure-VNC-Server-on-RHEL9.2
 # Configure VNC Server on RHEL9.2
 
 本文如无特殊说明，所有用户登录全部为普通用户，不使用root用户。
