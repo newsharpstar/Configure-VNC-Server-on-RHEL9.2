@@ -113,15 +113,15 @@ May 17 20:15:32 localhost.localdomain systemd[1]: Started Remote desktop service
 
 
 ## 9. 查看vnc启用的端口  
-
-> [test@localhost ~]$ netstat -lnp | grep vnc
+```bash
+[test@localhost ~]$ netstat -lnp | grep vnc
 (Not all processes could be identified, non-owned process info
  will not be shown, you would have to be root to see it all.)
 tcp        0      0 0.0.0.0:5901            0.0.0.0:*               LISTEN      91748/Xvnc
 tcp6       0      0 :::5901                 :::                    LISTEN      91748/Xvnc
 unix  2      [ ACC ]     STREAM     LISTENING     144858   91748/Xvnc           @/tmp/.X11-unix/X1
 unix  2      [ ACC ]     STREAM     LISTENING     144859   91748/Xvnc           /tmp/.X11-unix/X1
->
+```
 
 tcp右侧显示了当前vnc服务启用的端口。如果有多个用户，每个***ID***.service都是一个独立的服务，每个***ID***.service都是独立的服务端口号。
 ## 10. 连接vnc服务端
