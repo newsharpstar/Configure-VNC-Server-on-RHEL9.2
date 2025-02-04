@@ -4,33 +4,30 @@
 本文不讨论如何关闭启用RHEL防火墙。
 本文不讨论如何配置dnf安装软件基础环境。
 ## 1. 安装vncserver
-```bash
+
 [test@localhost ~]$ sudo dnf install tigervnc-server -y
+
+```bash
+sudo dnf install tigervnc-server -y
 ```
-
->sudo dnf install tigervnc-server -y
-
 
 ## 2. 复制配置文件
 
-> [test@localhost ~]$ sudo cp /usr/lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
+[test@localhost ~]$ sudo cp /usr/lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
 
 ```bash
 sudo cp /usr/lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:1.service
 ```
 vncserver@:***ID***.service，这个ID与下一步的修改用户配置文件前面的ID必须相同，否者最后启动服务报错。使用journalctl -xeu vncserver@:1.service命令可以查看服务启动失败的log有一行提示：
 
-
-> May 17 20:12:52 localhost.localdomain vncsession-restore[90750]: No user configured for display :1
+May 17 20:12:52 localhost.localdomain vncsession-restore[90750]: No user configured for display :1
 
 
 ## 3. 修改vnc登录用户配置文件
-
- 
-
-> [test@localhost ~]$ cat /etc/tigervnc/vncserver.users
+```bash
+[test@localhost ~]$ cat /etc/tigervnc/vncserver.users
 :1=test
-
+```
 :***ID***=test，必须与上一步的配置文件ID.service相同。在原文件里面修改可以，或者自己单独添加也行。
 ```bash
 sudo vim /etc/tigervnc/vncserver.users
@@ -56,7 +53,7 @@ vncpasswd
 [test@localhost ~]$ l.
 .  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .config  .lesshst  .local  .mozilla  .session  .viminfo  ***.vnc***  .Xauthority
 ```
-> [test@localhost ~]$ echo gnome-session > ~/.session
+[test@localhost ~]$ echo gnome-session > ~/.session
 
 没有任何的输出内容
 
@@ -70,12 +67,12 @@ echo gnome-session > ~/.session
 ```bash
 vim ~/.vnc/config
 ```
-
-> [test@localhost ~]$ cat ~/.vnc/config
+```bash
+[test@localhost ~]$ cat ~/.vnc/config
 session=gnome
 securitytypes=vncauth,tlsvnc
 geometry=1280x720
-
+```
  
 ## 6. 启动vnc服务
 
@@ -125,7 +122,11 @@ unix  2      [ ACC ]     STREAM     LISTENING     144859   91748/Xvnc           
 
 tcp右侧显示了当前vnc服务启用的端口。如果有多个用户，每个***ID***.service都是一个独立的服务，每个***ID***.service都是独立的服务端口号。
 ## 10. 连接vnc服务端
-使用MobaXterm软件连接即可。
+
+> 使用MobaXterm软件连接即可。
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff1435d7e946dedce04cfc050f78bcbd.png)
-一定要修改Port号，根据上面的查看服务端口号填写。
+
+> 一定要修改Port号，根据上面的查看服务端口号填写。
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4708cd674d419a46844e2a3782380cd2.png)
