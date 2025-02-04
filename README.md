@@ -4,12 +4,12 @@
 本文不讨论如何关闭启用RHEL防火墙。
 本文不讨论如何配置dnf安装软件基础环境。
 ## 1. 安装vncserver
-
-> [test@localhost ~]$ sudo dnf install tigervnc-server -y
-
 ```bash
-sudo dnf install tigervnc-server -y
+[test@localhost ~]$ sudo dnf install tigervnc-server -y
 ```
+
+>sudo dnf install tigervnc-server -y
+
 
 ## 2. 复制配置文件
 
