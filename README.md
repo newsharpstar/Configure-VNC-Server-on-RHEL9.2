@@ -52,9 +52,9 @@ vncpasswd
 ## 5. 修改vnc配置文件
 
 > [test@localhost ~]$ pwd
-/home/test
-[test@localhost ~]$ l.
-.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .config  .lesshst  .local  .mozilla  .session  .viminfo  ***.vnc***  .Xauthority
+> /home/test
+>[test@localhost ~]$ l.
+>.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .config  .lesshst  .local  .mozilla  .session  .viminfo  ***.vnc***  .Xauthority
 
 > [test@localhost ~]$ echo gnome-session > ~/.session
 
