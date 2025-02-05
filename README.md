@@ -124,9 +124,8 @@ tcp右侧显示了当前vnc服务启用的端口。如果有多个用户，每�
 ## 10. 连接vnc服务端
 
 > 使用MobaXterm软件连接即可。
-
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff1435d7e946dedce04cfc050f78bcbd.png)
+> ![image](https://github.com/user-attachments/assets/56c1204f-79f2-487a-8831-f04e91ff5123)
 
 > 一定要修改Port号，根据上面的查看服务端口号填写。
+> ![image](https://github.com/user-attachments/assets/9ff39559-9a3f-4913-85d3-e71fb4abf634)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4708cd674d419a46844e2a3782380cd2.png)
