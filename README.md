@@ -76,7 +76,7 @@ geometry=1280x720
  
 ## 6. 启动vnc服务
 
-> [test@localhost ~]$ sudo systemctl start vncserver@:1.service
+[test@localhost ~]$ sudo systemctl start vncserver@:1.service
 
 ```bash
 sudo systemctl start vncserver@:1.service
@@ -84,7 +84,7 @@ sudo systemctl start vncserver@:1.service
 
 ## 7. 启用vnc服务
 
-> [test@localhost ~]$ sudo systemctl enable vncserver@:1.service
+[test@localhost ~]$ sudo systemctl enable vncserver@:1.service
 
 ```bash
 sudo systemctl enable vncserver@:1.service
