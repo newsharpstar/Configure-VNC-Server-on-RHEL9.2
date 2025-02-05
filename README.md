@@ -61,7 +61,7 @@ vncpasswd
 echo gnome-session > ~/.session
 ```
 
-> [test@localhost ~]$ vim ~/.vnc/config
+[test@localhost ~]$ vim ~/.vnc/config
 
 这一步一定要注意执行的目录。普通用户是在/home/用户。如果使用root登录，那么需要进入到/root目录，是l.命令查看是否有.vnc这个目录
 ```bash
